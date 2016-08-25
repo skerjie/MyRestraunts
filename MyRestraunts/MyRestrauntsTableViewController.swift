@@ -66,6 +66,55 @@ class MyRestrauntsTableViewController: UITableViewController {
     tableView.deselectRow(at: indexPath, animated: true)
   }
   
+  //добавим действие для удаления ячейки
+  override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    
+    //    self.restaurantAlreadyVisited.remove(at: indexPath.row)
+    //    self.restaurantType.remove(at: indexPath.row)
+    //    self.restaurantNames.remove(at: indexPath.row)
+    //    self.restaurantImages.remove(at: indexPath.row)
+    //    self.restaurantLocation.remove(at: indexPath.row)
+    //
+    //    self.tableView.deleteRows(at: [indexPath], with: .fade)
+  }
+  
+  override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+    let allSharedActions = UITableViewRowAction(style: .default, title: "Поделится") { (UITableViewRowAction, indexPath) -> Void in
+      let allSharedActionsMenu = UIAlertController(title: nil, message: "Поделится через", preferredStyle: .actionSheet)
+      
+      let emailShareAction = UIAlertAction(title: "Email", style: .default, handler: nil)
+      let facebookShareAction = UIAlertAction(title: "Facebook", style: .default, handler: nil)
+      let vkShareAction = UIAlertAction(title: "Vkontakte", style: .default, handler: nil)
+      let cancelShareAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+      
+      allSharedActionsMenu.addAction(emailShareAction)
+      allSharedActionsMenu.addAction(facebookShareAction)
+      allSharedActionsMenu.addAction(vkShareAction)
+      allSharedActionsMenu.addAction(cancelShareAction)
+      
+      self.present(allSharedActionsMenu, animated: true, completion: nil)
+      
+    }
+    
+    // создаем кнопку Удалить и добавляем в возвращаемый массив объектов deleteActions
+    let deleteActions = UITableViewRowAction(style: .default, title: "Удалить") { (UITableViewRowAction, indexPath) -> Void in
+      
+      self.restaurantAlreadyVisited.remove(at: indexPath.row)
+      self.restaurantType.remove(at: indexPath.row)
+      self.restaurantNames.remove(at: indexPath.row)
+      self.restaurantImages.remove(at: indexPath.row)
+      self.restaurantLocation.remove(at: indexPath.row)
+      
+      self.tableView.deleteRows(at: [indexPath], with: .fade)
+      
+    }
+    
+    deleteActions.backgroundColor = UIColor.red()
+    allSharedActions.backgroundColor = UIColor.green()
+    
+    return [deleteActions, allSharedActions]
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     

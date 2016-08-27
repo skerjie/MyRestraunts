@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11173.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wLR-QF-84P">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11173.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="l5Q-Oj-BMV">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11143.2"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My Restraunts Table View Controller-->
+        <!--Title-->
         <scene sceneID="4SP-Bf-4aU">
             <objects>
                 <tableViewController id="wLR-QF-84P" customClass="MyRestrauntsTableViewController" customModule="MyRestraunts" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,11 +15,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="85" id="Gqz-iX-iA5" customClass="MyRestrauntsTableViewCell" customModule="MyRestraunts" customModuleProvider="target">
-                                <frame key="frameInset" minY="28" width="375" height="85"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="85" id="Gqz-iX-iA5" customClass="MyRestrauntsTableViewCell" customModule="MyRestraunts" customModuleProvider="target">
+                                <frame key="frameInset" minY="92" width="375" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gqz-iX-iA5" id="3Bl-wZ-iRh">
-                                    <frame key="frameInset" width="375" height="84"/>
+                                    <frame key="frameInset" width="342" height="84"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s36-8v-yYJ">
@@ -54,6 +54,7 @@
                                     <outlet property="nameLabel" destination="IRz-Iu-5TG" id="a5i-1l-yQ6"/>
                                     <outlet property="thumbnailImageView" destination="s36-8v-yYJ" id="vvP-OM-Nlq"/>
                                     <outlet property="typeLabel" destination="4uk-uT-fZS" id="Jxf-Uy-40h"/>
+                                    <segue destination="VbE-cf-Dad" kind="show" identifier="showDetailsSegue" id="STA-sx-TlY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -62,10 +63,57 @@
                             <outlet property="delegate" destination="wLR-QF-84P" id="Dsw-Od-mWT"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="Kgd-xr-tt4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yw5-Xq-OiB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="164"/>
+            <point key="canvasLocation" x="966" y="164"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="Nl9-2A-wN7">
+            <objects>
+                <viewController id="VbE-cf-Dad" customClass="DetailsViewController" customModule="MyRestraunts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SMk-lb-Ok7"/>
+                        <viewControllerLayoutGuide type="bottom" id="nhk-S6-oPg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AMx-dU-bRb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CQF-qK-eQn">
+                                <frame key="frameInset" width="375" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lIp-gu-G2r"/>
+                    <connections>
+                        <outlet property="resturantImageView" destination="CQF-qK-eQn" id="Ing-CV-Iqx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L6o-ts-f2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1772" y="163"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OTx-N8-aj5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l5Q-Oj-BMV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IRl-Er-hbf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wLR-QF-84P" kind="relationship" relationship="rootViewController" id="F8z-gY-aMm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tQP-wK-uHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="163.26836581709148"/>
         </scene>
     </scenes>
 </document>

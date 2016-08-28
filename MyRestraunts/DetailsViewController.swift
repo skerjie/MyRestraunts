@@ -10,12 +10,15 @@ import UIKit
 
 class DetailsViewController: UIViewController {
 
-  @IBOutlet var resturantImageView: UIImageView!
+  
+  @IBOutlet weak var resturantImageView: UIImageView!
   var resturantImage: String!
   
     override func viewDidLoad() {
         super.viewDidLoad()
 
+      //Важный пункт, об этом в видео не сказано!!!
+      self.resturantImageView.image = UIImage(named: resturantImage)
         // Do any additional setup after loading the view.
     }
 

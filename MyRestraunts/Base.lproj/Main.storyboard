@@ -15,11 +15,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="85" id="Gqz-iX-iA5" customClass="MyRestrauntsTableViewCell" customModule="MyRestraunts" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="85" id="Gqz-iX-iA5" customClass="MyRestrauntsTableViewCell" customModule="MyRestraunts" customModuleProvider="target">
                                 <frame key="frameInset" minY="92" width="375" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gqz-iX-iA5" id="3Bl-wZ-iRh">
-                                    <frame key="frameInset" width="342" height="84"/>
+                                    <frame key="frameInset" width="375" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s36-8v-yYJ">
@@ -90,7 +90,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="lIp-gu-G2r"/>
                     <connections>
-                        <outlet property="resturantImageView" destination="CQF-qK-eQn" id="Ing-CV-Iqx"/>
+                        <outlet property="resturantImageView" destination="CQF-qK-eQn" id="pN8-r1-p57"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L6o-ts-f2u" userLabel="First Responder" sceneMemberID="firstResponder"/>

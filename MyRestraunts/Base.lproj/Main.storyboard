@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11143.2"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -81,21 +82,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CQF-qK-eQn">
-                                <frame key="frameInset" width="375" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CQF-qK-eQn"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OYZ-oc-Lt4">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="vfZ-ux-zyA" customClass="DetailTableViewCell" customModule="MyRestraunts" customModuleProvider="target">
+                                        <frame key="frameInset" minY="28" width="383" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vfZ-ux-zyA" id="0TX-kP-92h">
+                                            <frame key="frameInset" width="383" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="key" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUL-BV-if3">
+                                                    <frame key="frameInset" minX="26" minY="14" width="136" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdL-Bv-O5S">
+                                                    <frame key="frameInset" minX="183" minY="11" width="192" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="keyLabel" destination="VUL-BV-if3" id="8RJ-bs-inA"/>
+                                            <outlet property="valueLabel" destination="rdL-Bv-O5S" id="zJc-bv-MAq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="VbE-cf-Dad" id="V2s-55-2La"/>
+                                    <outlet property="delegate" destination="VbE-cf-Dad" id="P1m-lt-VPr"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OYZ-oc-Lt4" firstAttribute="top" secondItem="CQF-qK-eQn" secondAttribute="bottom" id="9av-8i-ZCQ"/>
+                            <constraint firstItem="OYZ-oc-Lt4" firstAttribute="leading" secondItem="AMx-dU-bRb" secondAttribute="leadingMargin" constant="-20" id="BTp-gm-XUD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OYZ-oc-Lt4" secondAttribute="trailing" constant="-20" id="L1d-9j-Bpu"/>
+                            <constraint firstItem="nhk-S6-oPg" firstAttribute="top" secondItem="OYZ-oc-Lt4" secondAttribute="bottom" id="M9P-AN-zZJ"/>
+                            <constraint firstItem="nhk-S6-oPg" firstAttribute="top" secondItem="CQF-qK-eQn" secondAttribute="bottom" constant="250" id="SHd-MN-7x0"/>
+                            <constraint firstItem="CQF-qK-eQn" firstAttribute="top" secondItem="SMk-lb-Ok7" secondAttribute="bottom" id="TXw-sE-q6B"/>
+                            <constraint firstItem="CQF-qK-eQn" firstAttribute="leading" secondItem="AMx-dU-bRb" secondAttribute="leading" id="Z0k-cJ-NBV"/>
+                            <constraint firstItem="CQF-qK-eQn" firstAttribute="centerX" secondItem="AMx-dU-bRb" secondAttribute="centerX" id="h2c-pc-IGs"/>
+                            <constraint firstAttribute="trailing" secondItem="CQF-qK-eQn" secondAttribute="trailing" id="xMF-WW-qMb"/>
+                            <constraint firstItem="CQF-qK-eQn" firstAttribute="top" secondItem="SMk-lb-Ok7" secondAttribute="bottom" id="zoo-Ye-MPz"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lIp-gu-G2r"/>
                     <connections>
                         <outlet property="resturantImageView" destination="CQF-qK-eQn" id="pN8-r1-p57"/>
+                        <outlet property="tableView" destination="OYZ-oc-Lt4" id="FR4-YG-VCi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L6o-ts-f2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1772" y="163"/>
+            <point key="canvasLocation" x="1772" y="162.3688155922039"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OTx-N8-aj5">

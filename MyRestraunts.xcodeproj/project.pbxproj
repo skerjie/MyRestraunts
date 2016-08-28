@@ -15,6 +15,7 @@
 		F12284381D6DD18D00EDDE6B /* MyRestrauntsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12284371D6DD18D00EDDE6B /* MyRestrauntsTableViewCell.swift */; };
 		F159AB451D7002F0001C62EA /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F159AB441D7002F0001C62EA /* DetailsViewController.swift */; };
 		F159AB471D70E550001C62EA /* Restauranrs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F159AB461D70E550001C62EA /* Restauranrs.swift */; };
+		F1B13D771D72F8DA0048FFC6 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B13D761D72F8DA0048FFC6 /* DetailTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		F12284371D6DD18D00EDDE6B /* MyRestrauntsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRestrauntsTableViewCell.swift; sourceTree = "<group>"; };
 		F159AB441D7002F0001C62EA /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		F159AB461D70E550001C62EA /* Restauranrs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restauranrs.swift; sourceTree = "<group>"; };
+		F1B13D761D72F8DA0048FFC6 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				F12284371D6DD18D00EDDE6B /* MyRestrauntsTableViewCell.swift */,
 				F159AB461D70E550001C62EA /* Restauranrs.swift */,
 				F159AB441D7002F0001C62EA /* DetailsViewController.swift */,
+				F1B13D761D72F8DA0048FFC6 /* DetailTableViewCell.swift */,
 				F12284271D6DCF1600EDDE6B /* Main.storyboard */,
 				F122842A1D6DCF1600EDDE6B /* Assets.xcassets */,
 				F122842C1D6DCF1600EDDE6B /* LaunchScreen.storyboard */,
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1B13D771D72F8DA0048FFC6 /* DetailTableViewCell.swift in Sources */,
 				F12284361D6DCFE900EDDE6B /* MyRestrauntsTableViewController.swift in Sources */,
 				F12284241D6DCF1500EDDE6B /* AppDelegate.swift in Sources */,
 				F159AB471D70E550001C62EA /* Restauranrs.swift in Sources */,

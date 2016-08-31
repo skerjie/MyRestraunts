@@ -136,11 +136,25 @@ class MyRestrauntsTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    //Изменение кнопки в detailedview баре
+    self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = false
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    
+    // задаем автоматическое изменение размеров ячейки
+    self.tableView.estimatedRowHeight = 85
+    self.tableView.rowHeight = UITableViewAutomaticDimension
+    
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    self.navigationController?.hidesBarsOnSwipe = true
   }
   
   override func didReceiveMemoryWarning() {
@@ -183,11 +197,7 @@ class MyRestrauntsTableViewController: UITableViewController {
     
     return cell
   }
-  
-  override func prefersStatusBarHidden() -> Bool {
-    return true
-  }
-  
+
   
   /*
    // Override to support conditional editing of the table view.

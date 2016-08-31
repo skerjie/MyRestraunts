@@ -13,6 +13,10 @@ class DetailsViewController: UIViewController, UITableViewDataSource, UITableVie
   
   @IBOutlet weak var resturantImageView: UIImageView!
   @IBOutlet weak var tableView: UITableView!
+  @IBAction func Close(segue: UIStoryboardSegue) {
+  }
+  
+  
   var resturant: Restaurants!
   
   
@@ -21,10 +25,25 @@ class DetailsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     //Важный пункт, об этом в видео не сказано!!!
     self.resturantImageView.image = UIImage(named: resturant.image)
-    self.tableView.backgroundColor = UIColor(red: 250 / 255, green: 212 / 255, blue: 255 / 255, alpha: 1)
+    self.tableView.backgroundColor = UIColor(red: 250 / 255, green: 212 / 255, blue: 255 / 255, alpha: 1.0)
     self.tableView.tableFooterView = UIView(frame: CGRect.zero)
-    self.tableView.separatorColor = UIColor(red: 252 / 255, green: 232 / 255, blue: 255 / 255, alpha: 1)
+    self.tableView.separatorColor = UIColor(red: 252 / 255, green: 232 / 255, blue: 255 / 255, alpha: 1.0)
+    
+    title = self.resturant.name
+    
+    // задаем автоматическое изменение размеров ячейки
+    self.tableView.estimatedRowHeight = 44
+    self.tableView.rowHeight = UITableViewAutomaticDimension
+    
     // Do any additional setup after loading the view.
+  }
+  
+  // В детальном виде запрещаем скрывать navigationbar
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    self.navigationController?.hidesBarsOnSwipe = false
+    self.navigationController?.setToolbarHidden(false, animated: true)
   }
   
   override func didReceiveMemoryWarning() {

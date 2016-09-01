@@ -20,7 +20,7 @@
                                 <frame key="frameInset" minY="92" width="375" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gqz-iX-iA5" id="3Bl-wZ-iRh">
-                                    <frame key="frameInset" width="375" height="84"/>
+                                    <frame key="frameInset" width="375" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s36-8v-yYJ">
@@ -98,7 +98,7 @@
                                         <frame key="frameInset" minY="28" width="383" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vfZ-ux-zyA" id="0TX-kP-92h">
-                                            <frame key="frameInset" width="383" height="43"/>
+                                            <frame key="frameInset" width="383" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="key" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUL-BV-if3">
@@ -134,6 +134,9 @@
                                 </connections>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o5X-kp-fU4">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="gGn-5y-WuK"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem systemItem="action" id="0Na-aF-z6F"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="2jg-Oe-ejk"/>
@@ -157,7 +160,6 @@
                             <constraint firstItem="CQF-qK-eQn" firstAttribute="leading" secondItem="AMx-dU-bRb" secondAttribute="leading" id="Z0k-cJ-NBV"/>
                             <constraint firstItem="o5X-kp-fU4" firstAttribute="leading" secondItem="AMx-dU-bRb" secondAttribute="leading" id="axx-I0-eOo"/>
                             <constraint firstItem="nhk-S6-oPg" firstAttribute="top" secondItem="o5X-kp-fU4" secondAttribute="bottom" id="di8-OI-sGg"/>
-                            <constraint firstItem="o5X-kp-fU4" firstAttribute="top" secondItem="OYZ-oc-Lt4" secondAttribute="bottom" constant="-44" id="eD2-Ra-2Je"/>
                             <constraint firstItem="OYZ-oc-Lt4" firstAttribute="top" secondItem="o5X-kp-fU4" secondAttribute="bottom" id="gQa-Zr-z2b"/>
                             <constraint firstItem="CQF-qK-eQn" firstAttribute="centerX" secondItem="AMx-dU-bRb" secondAttribute="centerX" id="h2c-pc-IGs"/>
                             <constraint firstAttribute="trailing" secondItem="CQF-qK-eQn" secondAttribute="trailing" id="xMF-WW-qMb"/>
@@ -192,8 +194,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reviewBG" translatesAutoresizingMaskIntoConstraints="NO" id="FaX-U0-qXn"/>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V8O-6F-tIT">
-                                <frame key="frameInset" minX="17.87%" minY="215" width="64.00%" height="53.10%"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8O-6F-tIT">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы были тут. Вам понравилось?  " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTQ-he-q6k">
                                         <constraints>
@@ -261,11 +262,10 @@
                                     <constraint firstItem="DTQ-he-q6k" firstAttribute="top" secondItem="V8O-6F-tIT" secondAttribute="top" constant="25" id="mO4-Ev-tN9"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozJ-q4-8kg">
-                                <frame key="frameInset" minX="237" minY="137" width="75" height="75"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozJ-q4-8kg">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="GZJ-ce-hx2"/>
-                                    <constraint firstAttribute="height" constant="75" id="pNK-rI-ATq"/>
+                                    <constraint firstAttribute="width" constant="50" id="GZJ-ce-hx2"/>
+                                    <constraint firstAttribute="height" constant="50" id="pNK-rI-ATq"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="close"/>
                                 <connections>
@@ -279,14 +279,15 @@
                             <constraint firstItem="FaX-U0-qXn" firstAttribute="top" secondItem="OLp-b8-rUB" secondAttribute="bottom" constant="-20" id="Cz3-MP-HQP"/>
                             <constraint firstItem="V8O-6F-tIT" firstAttribute="top" secondItem="ozJ-q4-8kg" secondAttribute="bottom" constant="3" id="EVL-j7-keK"/>
                             <constraint firstItem="kex-Wv-TIU" firstAttribute="top" secondItem="FaX-U0-qXn" secondAttribute="bottom" id="QZB-FT-WnI"/>
+                            <constraint firstItem="ozJ-q4-8kg" firstAttribute="trailing" secondItem="V8O-6F-tIT" secondAttribute="trailing" id="buU-0Y-bxQ"/>
                             <constraint firstAttribute="trailing" secondItem="FaX-U0-qXn" secondAttribute="trailing" id="i5a-7g-MWG"/>
                             <constraint firstItem="FaX-U0-qXn" firstAttribute="leading" secondItem="vlQ-LP-Jue" secondAttribute="leading" id="rjh-pY-0kS"/>
-                            <constraint firstItem="ozJ-q4-8kg" firstAttribute="leading" secondItem="FaX-U0-qXn" secondAttribute="trailing" constant="-138" id="v02-hl-Do4"/>
                             <constraint firstItem="V8O-6F-tIT" firstAttribute="centerY" secondItem="FaX-U0-qXn" secondAttribute="centerY" id="w8h-Fg-gub"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backgrounImageView" destination="FaX-U0-qXn" id="Jna-sa-evB"/>
+                        <outlet property="windowView" destination="V8O-6F-tIT" id="fiy-Gn-vR6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oc2-AS-nlC" userLabel="First Responder" sceneMemberID="firstResponder"/>

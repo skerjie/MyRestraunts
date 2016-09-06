@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F10E8DE81D78BF2800EA582A /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10E8DE71D78BF2800EA582A /* ShareViewController.swift */; };
 		F12284241D6DCF1500EDDE6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12284231D6DCF1500EDDE6B /* AppDelegate.swift */; };
 		F12284291D6DCF1600EDDE6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F12284271D6DCF1600EDDE6B /* Main.storyboard */; };
 		F122842B1D6DCF1600EDDE6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F122842A1D6DCF1600EDDE6B /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F10E8DE71D78BF2800EA582A /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		F12284201D6DCF1500EDDE6B /* MyRestraunts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRestraunts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F12284231D6DCF1500EDDE6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F12284281D6DCF1600EDDE6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,8 +71,9 @@
 				F12284371D6DD18D00EDDE6B /* MyRestrauntsTableViewCell.swift */,
 				F159AB461D70E550001C62EA /* Restauranrs.swift */,
 				F159AB441D7002F0001C62EA /* DetailsViewController.swift */,
-				F1E0BC021D7743360048C544 /* QuickReviewViewController.swift */,
 				F1B13D761D72F8DA0048FFC6 /* DetailTableViewCell.swift */,
+				F1E0BC021D7743360048C544 /* QuickReviewViewController.swift */,
+				F10E8DE71D78BF2800EA582A /* ShareViewController.swift */,
 				F12284271D6DCF1600EDDE6B /* Main.storyboard */,
 				F122842A1D6DCF1600EDDE6B /* Assets.xcassets */,
 				F122842C1D6DCF1600EDDE6B /* LaunchScreen.storyboard */,
@@ -159,6 +162,7 @@
 				F1E0BC031D7743360048C544 /* QuickReviewViewController.swift in Sources */,
 				F159AB471D70E550001C62EA /* Restauranrs.swift in Sources */,
 				F12284381D6DD18D00EDDE6B /* MyRestrauntsTableViewCell.swift in Sources */,
+				F10E8DE81D78BF2800EA582A /* ShareViewController.swift in Sources */,
 				F159AB451D7002F0001C62EA /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -127,8 +127,8 @@ class MyRestrauntsTableViewController: UITableViewController {
       
     }
     
-    deleteActions.backgroundColor = UIColor.red()
-    allSharedActions.backgroundColor = UIColor.green()
+    deleteActions.backgroundColor = UIColor.red
+    allSharedActions.backgroundColor = UIColor.green
     
     return [deleteActions, allSharedActions]
   }
@@ -185,15 +185,17 @@ class MyRestrauntsTableViewController: UITableViewController {
     cell.nameLabel.text = myRestaurant[indexPath.row].name
     cell.typeLabel.text = myRestaurant[indexPath.row].type
     cell.locationLabel.text = myRestaurant[indexPath.row].location
-    cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.size.height/2
+   // задает закругления картинкам через код или через InterfaceBuilder коммандой layer.cornerRadius со значением 30
+    // cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.size.height/2
+    
     cell.thumbnailImageView.clipsToBounds = true
     
-    if myRestaurant[indexPath.row].isVisited {
-      cell.accessoryType = .checkmark
-    } else {
-      cell.accessoryType = .none
-    }
-    cell.tintColor = UIColor.red()
+//    if myRestaurant[indexPath.row].isVisited {
+//      cell.accessoryType = .checkmark
+//    } else {
+//      cell.accessoryType = .none
+//    }
+//    cell.tintColor = UIColor.red()
     
     return cell
   }
@@ -239,11 +241,11 @@ class MyRestrauntsTableViewController: UITableViewController {
   
   // In a storyboard-based application, you will often want to do a little preparation before navigation
   
-  override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+  func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
     
     if segue.identifier == "showDetailsSegue" {
       if let indexPath = self.tableView.indexPathForSelectedRow {
-        let destinationVC = segue.destinationViewController as! DetailsViewController
+        let destinationVC = segue.destination as! DetailsViewController
         destinationVC.resturant = self.myRestaurant[indexPath.row]
       }
     }

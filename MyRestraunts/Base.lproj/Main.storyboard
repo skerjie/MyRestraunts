@@ -28,6 +28,11 @@
                                                 <constraint firstAttribute="width" constant="65" id="94T-RN-Uf8"/>
                                                 <constraint firstAttribute="height" constant="65" id="NyY-do-g9i"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="30"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRz-Iu-5TG">
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
@@ -179,6 +184,7 @@
                     <connections>
                         <outlet property="resturantImageView" destination="CQF-qK-eQn" id="pN8-r1-p57"/>
                         <outlet property="tableView" destination="OYZ-oc-Lt4" id="FR4-YG-VCi"/>
+                        <segue destination="kut-ee-0H1" kind="show" identifier="showTheMap" id="1b9-H0-jEw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L6o-ts-f2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -331,7 +337,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OFd-9K-i2h" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="aZG-0F-xmR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1772" y="884.70764617691157"/>
+            <point key="canvasLocation" x="1734" y="923"/>
+        </scene>
+        <!--Map Restaurant View View Controller-->
+        <scene sceneID="6BX-1u-6QS">
+            <objects>
+                <viewController id="kut-ee-0H1" customClass="MapRestaurantViewViewController" customModule="MyRestraunts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ch1-2T-Bku"/>
+                        <viewControllerLayoutGuide type="bottom" id="JvM-tY-D3o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dld-G8-Lw8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ziR-3I-p8J"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ziR-3I-p8J" firstAttribute="top" secondItem="Ch1-2T-Bku" secondAttribute="bottom" constant="-20" id="WjL-FW-wnh"/>
+                            <constraint firstItem="ziR-3I-p8J" firstAttribute="leading" secondItem="dld-G8-Lw8" secondAttribute="leadingMargin" constant="-16" id="aeC-3o-hY3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ziR-3I-p8J" secondAttribute="trailing" constant="-16" id="e7Y-7O-bQ8"/>
+                            <constraint firstItem="JvM-tY-D3o" firstAttribute="top" secondItem="ziR-3I-p8J" secondAttribute="bottom" id="sPY-CT-Has"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapVew" destination="ziR-3I-p8J" id="pSw-0L-CaB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="it9-Ix-bN5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2555" y="923"/>
         </scene>
         <!--Quick Review View Controller-->
         <scene sceneID="hEM-gK-HDX">

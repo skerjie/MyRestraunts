@@ -17,6 +17,8 @@
 		F159AB451D7002F0001C62EA /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F159AB441D7002F0001C62EA /* DetailsViewController.swift */; };
 		F159AB471D70E550001C62EA /* Restauranrs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F159AB461D70E550001C62EA /* Restauranrs.swift */; };
 		F1B13D771D72F8DA0048FFC6 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B13D761D72F8DA0048FFC6 /* DetailTableViewCell.swift */; };
+		F1DC182F1D7F0931005A1ABD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1DC182E1D7F0931005A1ABD /* MapKit.framework */; };
+		F1DC18311D7F0CC4005A1ABD /* MapRestaurantViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DC18301D7F0CC4005A1ABD /* MapRestaurantViewViewController.swift */; };
 		F1E0BC031D7743360048C544 /* QuickReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E0BC021D7743360048C544 /* QuickReviewViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		F159AB441D7002F0001C62EA /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		F159AB461D70E550001C62EA /* Restauranrs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restauranrs.swift; sourceTree = "<group>"; };
 		F1B13D761D72F8DA0048FFC6 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		F1DC182E1D7F0931005A1ABD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F1DC18301D7F0CC4005A1ABD /* MapRestaurantViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapRestaurantViewViewController.swift; sourceTree = "<group>"; };
 		F1E0BC021D7743360048C544 /* QuickReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickReviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1DC182F1D7F0931005A1ABD /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +57,7 @@
 			children = (
 				F12284221D6DCF1500EDDE6B /* MyRestraunts */,
 				F12284211D6DCF1500EDDE6B /* Products */,
+				F1DC182D1D7F0931005A1ABD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +79,7 @@
 				F159AB441D7002F0001C62EA /* DetailsViewController.swift */,
 				F1B13D761D72F8DA0048FFC6 /* DetailTableViewCell.swift */,
 				F1E0BC021D7743360048C544 /* QuickReviewViewController.swift */,
+				F1DC18301D7F0CC4005A1ABD /* MapRestaurantViewViewController.swift */,
 				F10E8DE71D78BF2800EA582A /* ShareViewController.swift */,
 				F12284271D6DCF1600EDDE6B /* Main.storyboard */,
 				F122842A1D6DCF1600EDDE6B /* Assets.xcassets */,
@@ -80,6 +87,14 @@
 				F122842F1D6DCF1600EDDE6B /* Info.plist */,
 			);
 			path = MyRestraunts;
+			sourceTree = "<group>";
+		};
+		F1DC182D1D7F0931005A1ABD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1DC182E1D7F0931005A1ABD /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,7 +131,13 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = QMNXFRSMX5;
 						DevelopmentTeamName = "Andrei Palonski (Personal Team)";
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -164,6 +185,7 @@
 				F12284381D6DD18D00EDDE6B /* MyRestrauntsTableViewCell.swift in Sources */,
 				F10E8DE81D78BF2800EA582A /* ShareViewController.swift in Sources */,
 				F159AB451D7002F0001C62EA /* DetailsViewController.swift in Sources */,
+				F1DC18311D7F0CC4005A1ABD /* MapRestaurantViewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

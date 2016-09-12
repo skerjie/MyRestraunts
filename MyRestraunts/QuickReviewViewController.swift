@@ -16,8 +16,8 @@ class QuickReviewViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // создание brur эффекта
-    var darkBlurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
-    var darkBlurEffectView = UIVisualEffectView(effect: darkBlurEffect)
+    let darkBlurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+    let darkBlurEffectView = UIVisualEffectView(effect: darkBlurEffect)
     darkBlurEffectView.frame = view.bounds
     backgrounImageView.addSubview(darkBlurEffectView)
     

@@ -25,9 +25,9 @@ class DetailsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     //Важный пункт, об этом в видео не сказано!!!
     self.resturantImageView.image = UIImage(named: resturant.image)
-    self.tableView.backgroundColor = UIColor(red: 250 / 255, green: 212 / 255, blue: 255 / 255, alpha: 1.0)
+    self.tableView.backgroundColor = UIColor(red: 240 / 255, green: 240 / 255, blue: 240 / 255, alpha: 1.0)
     self.tableView.tableFooterView = UIView(frame: CGRect.zero)
-    self.tableView.separatorColor = UIColor(red: 252 / 255, green: 232 / 255, blue: 255 / 255, alpha: 1.0)
+    self.tableView.separatorColor = UIColor(red: 227 / 255, green: 227 / 255, blue: 228 / 255, alpha: 1.0)
     
     title = self.resturant.name
     
@@ -101,11 +101,26 @@ class DetailsViewController: UIViewController, UITableViewDataSource, UITableVie
       cell.valueLabel.text = ""
     }
     
-    cell.backgroundColor = UIColor.clear()
+    cell.backgroundColor = UIColor.clear
     
     return cell
   }
   
+  // говорим ячейке с индексом 2 (location) при нажатии переходить на viewController с картами
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    if indexPath.row == 2 {
+      self.performSegue(withIdentifier: "showTheMap", sender: nil)
+    }
+    tableView.deselectRow(at: indexPath, animated: true)
+  }
+  
+  
+  func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "showTheMap" {
+    let destinationVC = segue.destination as! MapRestaurantViewViewController
+      destinationVC.resturant = resturant
+    }
+  }
   /*
    // MARK: - Navigation
    
